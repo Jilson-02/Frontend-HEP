@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* Hospital de Especialidades – Portoviejo: base tipográfica y variables globales */
+:root {
+  --hep-blue: #0c4da2;
+  --hep-blue-dark: #083060;
+  --hep-blue-light: #e8f2fb;
+  --hep-blue-mid: #1565c0;
+  --hep-white: #ffffff;
+  --hep-text: #1a365d;
+  --hep-text-muted: #4a6fa5;
+  --hep-accent-teal: #0d9488;
+  --hep-accent-amber: #d97706;
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--hep-text);
+  background: var(--hep-blue-light);
+  font-family: inherit;
+  font-size: 16px;
+}
