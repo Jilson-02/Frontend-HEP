@@ -1,29 +1,62 @@
-<div class="shell">
-  <header class="topbar">
-    <div class="brand-wrap">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <div class="brand-text">
-        <span class="brand-title">Hospital de Especialidades</span>
-        <span class="brand-sub">Portoviejo</span>
-      </div>
-    </div>
-    <div class="spacer"></div>
-    <div class="user">
-      <span class="username">{{ auth.user()?.username }}</span>
-      <button type="button" (click)="logout()">Cerrar sesión</button>
-    </div>
-  </header>
+<div class="container">
 
-  <main class="content">
-    <h1>Bienvenido</h1>
-    <p class="lead">Sesión iniciada correctamente.</p>
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <h1>🏥 HEP - Gestión de Bienes</h1>
+      <p>Sistema de control e inventario institucional</p>
+    </div>
 
-    <section class="panel">
-      <h2>Sesión</h2>
-      <div class="kv">
-        <span class="k">Usuario</span>
-        <span class="v">{{ auth.user()?.username }}</span>
-      </div>
-    </section>
-  </main>
+    <div class="user-info">
+      <span>👤 {{ userName }}</span>
+      <button class="btn-logout" (click)="logout()">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <!-- BIENVENIDA -->
+  <div class="welcome">
+    <h2>Panel de control</h2>
+    <p>Administración y seguimiento de bienes hospitalarios</p>
+  </div>
+
+  <!-- MÓDULOS -->
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">📥</div>
+      <h3>Ingreso de Bienes</h3>
+      <p>Registro de nuevos equipos, mobiliario y activos.</p>
+      <button>Gestionar</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏷️</div>
+      <h3>Identificación</h3>
+      <p>Asignación de códigos e inventario institucional.</p>
+      <button>Consultar</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">📍</div>
+      <h3>Seguimiento</h3>
+      <p>Ubicación y estado actual de los bienes.</p>
+      <button>Ver estado</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛠️</div>
+      <h3>Mantenimiento</h3>
+      <p>Control de reparaciones y mantenimientos.</p>
+      <button>Administrar</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">📤</div>
+      <h3>Baja de Bienes</h3>
+      <p>Registro de bienes dados de baja o descartados.</p>
+      <button>Registrar</button>
+    </div>
+
+  </div>
+
 </div>

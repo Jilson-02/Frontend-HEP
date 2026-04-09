@@ -14,6 +14,10 @@ export class HomePage {
   readonly auth = inject(AuthService);
   private readonly router = inject(Router);
 
+  get userName(): string {
+    return this.auth.user()?.username ?? 'Invitado';
+  }
+
   logout(): void {
     this.auth.logout();
     void this.router.navigateByUrl('/login');
